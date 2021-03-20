@@ -1,4 +1,4 @@
-dbPassword = 'mongodb+srv://jim:lKLj7wJzT9L14BCs@firstcluster.yr6uz.mongodb.net/registration?retryWrites=true&w=majority';
+dbPassword = 'insert your mongoDB password';
 module.exports={
     MongoURI: dbPassword
 }

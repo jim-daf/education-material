@@ -1,5 +1,5 @@
 const sgMail = require('@sendgrid/mail')
-sgMail.setApiKey('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')
+sgMail.setApiKey('insert your sendgrid Api Key')
 
 const sendMails = (subject, text) => {
     const msg={
@@ -7,7 +7,7 @@ const sendMails = (subject, text) => {
           {
             to: [
               {
-                "email": "ece19032@go.uop.gr"
+                "email": "insert receiver's email"
               }
             ],
             
@@ -15,17 +15,18 @@ const sendMails = (subject, text) => {
           {
             to: [
               {
-                "email": "jimdaf11@gmail.com"
+                "email": "insert receiver's email"
               }
             ],
             
           }
         ],
-        from: 'jimitrakis11@gmail.com',
+        from: "insert sender's email",
         subject: subject,
         text: text
     
     }
+    // Send email
     
     sgMail.send(msg, function(err,info){
         if(err){

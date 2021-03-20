@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="el" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" href="/assets/training_course/style.css">
+    
+    <link rel="stylesheet" href="/assets/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+    
+    
+    <div class="field field-body field-item">
+        
+        <title>Training Course</title>
+        
+    </div>
+        
+        
+</head>
+<style>
+    /* Responsive rules for navbar */
+    @media screen and (min-width: 1600px) {
+        #logo {
+        font-size: 25px; 
+        position: relative;
+        right: 150px;
+    }
+    .wrapper{
+        white-space: nowrap;
+    }
+    }
+    @media screen and (max-width: 1600px) {
+  .wrapper .btn {
+    display: block;
+  }
+  .wrapper .nav-links {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    top: 0;
+    left: -100%;
+    background: #242526;
+    display: block;
+    padding: 50px 10px;
+    line-height: 50px;
+    overflow-y: auto;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
+    transition: all 0.3s ease;
+  }
+  /* custom scroll bar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #242526;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3a3b3c;
+  }
+  #menu-btn:checked ~ .nav-links {
+    left: 0%;
+  }
+  #menu-btn:checked ~ .btn.menu-btn {
+    display: none;
+  }
+  #close-btn:checked ~ .btn.menu-btn {
+    display: block;
+  }
+  .nav-links li {
+    margin: 15px 10px;
+  }
+  .nav-links li a {
+    padding: 0 20px;
+    display: block;
+    font-size: 20px;
+  }
+  .nav-links .drop-menu {
+    position: static;
+    opacity: 1;
+    top: 65px;
+    visibility: visible;
+    padding-left: 20px;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    box-shadow: none;
+    transition: all 0.3s ease;
+  }
+  #showDrop:checked ~ .drop-menu,
+  #showMega:checked ~ .mega-box {
+    max-height: 100%;
+  }
+  .nav-links .desktop-item {
+    display: none;
+  }
+  .nav-links .mobile-item {
+    display: block;
+    color: #f2f2f2;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .nav-links .mobile-item:hover {
+    background: #3a3b3c;
+  }
+  .drop-menu li {
+    margin: 0;
+  }
+  .drop-menu li a {
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  .mega-box {
+    position: static;
+    top: 65px;
+    opacity: 1;
+    visibility: visible;
+    padding: 0 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .mega-box .content {
+    box-shadow: none;
+    flex-direction: column;
+    padding: 20px 20px 0 20px;
+  }
+  .mega-box .content .row {
+    width: 100%;
+    margin-bottom: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .mega-box .content .row:nth-child(1),
+  .mega-box .content .row:nth-child(2) {
+    border-top: 0px;
+  }
+  .content .row .mega-links {
+    border-left: 0px;
+    padding-left: 15px;
+  }
+  .row .mega-links li {
+    margin: 0;
+  }
+  .content .row header {
+    font-size: 19px;
+  }
+  
+}
+    
+</style>
+<body id="body" class="nid-1191 node-lesson not-front-page user-role-anonymous">
+    <nav id="navbar">
+        <div class="wrapper">
+            <div class="logo"  ><a id="logo" href="#"  >Training Course</a></div>
+            <input type="radio" name="slider" id="menu-btn">
+            <input type="radio" name="slider" id="close-btn">
+            <ul class="nav-links">
+                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                <li><a href="/dashboard" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><i class="fa fa-home"
+                            aria-hidden="true"></i> Home</a></li>
+                <li><a href="/users/trainingMaterial" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><i class="fa fa-info-circle"
+                            aria-hidden="true"></i> Training Material</a></li>
+                <li><a href="/users/trainingCourse" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><i
+                            class="fa fa-video-camera" aria-hidden="true"></i>
+                        Training Course</a></li>
+                <li>
+                    <a href="#" class="desktop-item" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><i
+                            class="fa fa-users" aria-hidden="true"></i> Sectors <i class="fa fa-angle-down" id="arrow"
+                            aria-hidden="true"></i></a>
+                    <input type="checkbox" id="showDrop">
+                    <label for="showDrop" class="mobile-item"><i class="fa fa-users" aria-hidden="true"></i> Users <i
+                            class="fa fa-angle-down" id="arrow" aria-hidden="true"></i></label>
+                    <ul class="drop-menu" style="font-family: Verdana, Geneva, Tahoma, sans-serif; ">
+                        <li><a href="#">Beer</a></li>
+                        <li><a href="#">Paper and pulp</a></li>
+                        <li><a href="#">Meat processing</a></li>
+                        <li><a href="#">Sugar</a></li>
+                        <li><a href="#">Vegetable oils</a></li>
+                        <li><a href="#">Wine</a></li>
+                        <li><a href="#">Juice</a></li>
+                        <li><a href="#">Biodiesel</a></li>
+                        <li><a href="#">Cheese</a></li>
+                        <li><a href="#">Potato processing</a></li>
+                        <li><a href="#">Ice-cream</a></li>
+                        <li><a href="#">Tomato processing</a></li>
+                        <li><a href="#">Yeast production</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="desktop-item" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Mega Menu <i
+                            class="fa fa-angle-down" id="arrow" aria-hidden="true"></i></a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="mobile-item">Mega Menu <i class="fa fa-angle-down" id="arrow"
+                            aria-hidden="true"></i></label>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+    
+                                <header>Anaerobic bioreactor technologies</header>
+                                <ul class="mega-links">
+                                    <li><a href="#">Safety equipment</a></li>
+                                    <li><a href="#">Tanks and accessories</a></li>
+                                    <li><a href="#">Mixing equipment</a></li>
+                                    <li><a href="#">Pumping equipment</a></li>
+                                    <li><a href="#">Heating equipment</a></li>
+                                    <li><a href="#">Process monitoring equipment</a></li>
+                                    <li><a href="#">Installation, operation and maintenance</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header>Dropdown</header>
+                                <ul class="mega-links">
+                                    <li><a href="#">Dropmenu 1</a></li>
+                                    <li><a href="#">Dropmenu 2</a></li>
+                                    <li><a href="#">Dropmenu 3</a></li>
+                                    <li><a href="#">Dropmenu 4</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header>Aerobic bioreactor technologies</header>
+                                <ul class="mega-links">
+                                    <li><a href="#">Tanks and accessories (3D printing tanks)</a></li>
+                                    <li><a href="#">Pumping equipment</a></li>
+                                    <li><a href="#">Aeration equipment</a></li>
+                                    <li><a href="#">Mixing equipment</a></li>
+                                    <li><a href="#">Heating equipment</a></li>
+                                    <li><a href="#">Process monitoring equipment</a></li>
+                                    <li><a href="#">Installation, operation and maintenance</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header>Dropdown</header>
+                                <ul class="mega-links">
+                                    <li><a href="#">Dropmenu 1</a></li>
+                                    <li><a href="#">Dropmenu 2</a></li>
+                                    <li><a href="#">Dropmenu 3</a></li>
+                                    <li><a href="#">Dropmenu 4</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="/users/contact" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><i
+                            class="fa fa-comment" aria-hidden="true"></i> Contact</a></li>
+                <li><a href="/users/logout" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><i class=icon-foo
+                            style="font-family: FontAwesome; font-style: normal;">&#xf08b;</i> Log out</a></li>
+            </ul>
+            <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        </div>
+    </nav>
+    
+    <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+        <div id="page-wrapper">
+            <div id="page">
+                
+
+                
+
+                <div class="tab-region">
+                    <div class="tab-content-wrapper clearfix">
+                        <div class="tab-content">
+
+                            <div id="paragraph-628837" class="tab-pane fade">
+
+                                <div class="paragraph paragraph--type--general-tab paragraph--view-mode--full">
+
+                                    <div class="field field-body field-item">
+                                        
+
+                                        <div class="lesson" id="lesson">
+                                            <div class="chapters">
+
+                                                <div class="chapter" id="chapter">
+                                                    <div class="title"
+                                                        style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Course
+                                                    </div>
+                                                    <div class="subchapters" id="subchapters">
+
+                                                        <div class="subchapter">
+                                                            <div class="title"
+                                                                style="font-family: Verdana, Geneva, Tahoma, sans-serif;"
+                                                                onclick="display(document.getElementById('chapter-content-wrapper1'))">
+                                                                Chapter 1</div>
+                                                            <div class="chapter-content-wrapper"
+                                                                id="chapter-content-wrapper1" style="display: none;">
+
+
+
+                                                                <div class="field field-video-media field-item"
+                                                                    id="notred">
+                                                                    <a class="chapter-content-link"
+                                                                        onclick="playVideo('/media/video.mp4')"
+                                                                        style="text-decoration: underline; cursor: pointer;">Video
+                                                                        1 <span class="duration">05:39</span></a>
+                                                                </div>
+
+                                                                <div class="field field-video-media field-item"
+                                                                    id="notred">
+                                                                    <a class="chapter-content-link"
+                                                                        onclick="playVideo('/media/bigbuck.mp4')"
+                                                                        style="text-decoration: underline; cursor: pointer;">Video
+                                                                        2 <span class="duration">05:39</span></a>
+                                                                </div>
+
+                                                                <div class="field field-video-media field-item"
+                                                                    id="notred">
+                                                                    <a class="chapter-content-link"
+                                                                        onclick="playVideo('/media/bigbuck.mp4')"
+                                                                        style="text-decoration: underline; cursor: pointer;">Video
+                                                                        3 <span class="duration">05:39</span></a>
+                                                                </div>
+
+                                                                <div class="field field-video-media field-item"
+                                                                    id="notred">
+                                                                    <a class="chapter-content-link"
+                                                                        onclick="playVideo('/media/bigbuck.mp4')"
+                                                                        style="text-decoration: underline; cursor: pointer;">Video
+                                                                        4 <span class="duration">05:39</span></a>
+                                                                </div>
+
+                                                                <div class="field field-video-media field-item"
+                                                                    id="notred">
+                                                                    <a class="chapter-content-link"
+                                                                        onclick="playVideo('/media/bigbuck.mp4')"
+                                                                        style="text-decoration: underline; cursor: pointer;">Video
+                                                                        5 <span class="duration">05:39</span></a>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="subchapter">
+                                                                <div class="title"
+                                                                    onclick="display(document.getElementById('chapter-content-wrapper2'))"
+                                                                    style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                                                    Chapter 2</div>
+                                                                <div class="chapter-content-wrapper"
+                                                                    id="chapter-content-wrapper2"
+                                                                    style="display: none;">
+
+
+
+                                                                    <div class="field field-video-media field-item"
+                                                                        id="notred">
+                                                                        <a class="chapter-content-link"
+                                                                            onclick="playVideo('/media/bigbuck.mp4')"
+                                                                            style="text-decoration: underline; cursor: pointer;">Video
+                                                                            1 <span class="duration">05:39</span></a>
+                                                                    </div>
+
+                                                                    <div class="field field-video-media field-item"
+                                                                        id="notred">
+                                                                        <a class="chapter-content-link"
+                                                                            onclick="playVideo('/media/bigbuck.mp4')"
+                                                                            style="text-decoration: underline; cursor: pointer;">Video
+                                                                            2 <span class="duration">05:39</span></a>
+                                                                    </div>
+
+                                                                    <div class="field field-video-media field-item"
+                                                                        id="notred">
+                                                                        <a class="chapter-content-link"
+                                                                            onclick="playVideo('/media/bigbuck.mp4')"
+                                                                            style="text-decoration: underline; cursor: pointer;">Video
+                                                                            3 <span class="duration">05:39</span></a>
+                                                                    </div>
+
+                                                                    <div class="field field-video-media field-item"
+                                                                        id="notred">
+                                                                        <a class="chapter-content-link"
+                                                                            onclick="playVideo('/media/bigbuck.mp4')"
+                                                                            style="text-decoration: underline; cursor: pointer;">Video
+                                                                            4 <span class="duration">05:39</span></a>
+                                                                    </div>
+
+                                                                    <div class="field field-video-media field-item"
+                                                                        id="notred">
+                                                                        <a class="chapter-content-link"
+                                                                            onclick="playVideo('/media/bigbuck.mp4')"
+                                                                            style="text-decoration: underline; cursor: pointer;">Video
+                                                                            5 <span class="duration">05:39</span></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="subchapter">
+                                                                    <div class="title"
+                                                                        onclick="display(document.getElementById('chapter-content-wrapper3'))"
+                                                                        style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                                                        Chapter 3
+                                                                    </div>
+                                                                    <div class="chapter-content-wrapper"
+                                                                        id="chapter-content-wrapper3"
+                                                                        style="display: none;">
+
+
+
+                                                                        <div class="field field-video-media field-item"
+                                                                            id="notred">
+                                                                            <a class="chapter-content-link"
+                                                                                onclick="playVideo('/media/bigbuck.mp4')"
+                                                                                style="text-decoration: underline; cursor: pointer;">Video
+                                                                                1 <span
+                                                                                    class="duration">05:39</span></a>
+                                                                        </div>
+
+                                                                        <div class="field field-video-media field-item"
+                                                                            id="notred">
+                                                                            <a class="chapter-content-link"
+                                                                                onclick="playVideo('/media/bigbuck.mp4')"
+                                                                                style="text-decoration: underline; cursor: pointer;">Video
+                                                                                2 <span
+                                                                                    class="duration">05:39</span></a>
+                                                                        </div>
+
+                                                                        <div class="field field-video-media field-item"
+                                                                            id="notred">
+                                                                            <a class="chapter-content-link"
+                                                                                onclick="playVideo('/media/bigbuck.mp4')"
+                                                                                style="text-decoration: underline; cursor: pointer;">Video
+                                                                                3 <span
+                                                                                    class="duration">05:39</span></a>
+                                                                        </div>
+
+                                                                        <div class="field field-video-media field-item"
+                                                                            id="notred">
+                                                                            <a class="chapter-content-link"
+                                                                                onclick="playVideo('/media/bigbuck.mp4')"
+                                                                                style="text-decoration: underline; cursor: pointer;">Video
+                                                                                4 <span
+                                                                                    class="duration">05:39</span></a>
+                                                                        </div>
+
+                                                                        <div class="field field-video-media field-item"
+                                                                            id="notred">
+                                                                            <a class="chapter-content-link"
+                                                                                onclick="playVideo('/media/bigbuck.mp4')"
+                                                                                style="text-decoration: underline; cursor: pointer;">Video
+                                                                                5 <span
+                                                                                    class="duration">05:39</span></a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="subchapter">
+                                                                        <div class="title"
+                                                                            onclick="display(document.getElementById('chapter-content-wrapper4'))"
+                                                                            style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                                                            Chapter 4
+                                                                        </div>
+                                                                        <div class="chapter-content-wrapper"
+                                                                            id="chapter-content-wrapper4"
+                                                                            style="display: none;">
+
+
+
+                                                                            <div class="field field-video-media field-item"
+                                                                                id="notred">
+                                                                                <a class="chapter-content-link"
+                                                                                    onclick="playVideo('/media/bigbuck.mp4')"
+                                                                                    style="text-decoration: underline; cursor: pointer;">Video
+                                                                                    1 <span
+                                                                                        class="duration">05:39</span></a>
+                                                                            </div>
+
+                                                                            <div class="field field-video-media field-item"
+                                                                                id="notred">
+                                                                                <a class="chapter-content-link"
+                                                                                    onclick="playVideo('/media/bigbuck.mp4')"
+                                                                                    style="text-decoration: underline; cursor: pointer;">Video
+                                                                                    2 <span
+                                                                                        class="duration">05:39</span></a>
+                                                                            </div>
+
+                                                                            <div class="field field-video-media field-item"
+                                                                                id="notred">
+                                                                                <a class="chapter-content-link"
+                                                                                    onclick="playVideo('/media/bigbuck.mp4')"
+                                                                                    style="text-decoration: underline; cursor: pointer;">Video
+                                                                                    3 <span
+                                                                                        class="duration">05:39</span></a>
+                                                                            </div>
+
+                                                                            <div class="field field-video-media field-item"
+                                                                                id="notred">
+                                                                                <a class="chapter-content-link"
+                                                                                    onclick="playVideo('/media/bigbuck.mp4')"
+                                                                                    style="text-decoration: underline; cursor: pointer;">Video
+                                                                                    4 <span
+                                                                                        class="duration">05:39</span></a>
+                                                                            </div>
+
+                                                                            <div class="field field-video-media field-item"
+                                                                                id="notred">
+                                                                                <a class="chapter-content-link"
+                                                                                    onclick="playVideo('/media/bigbuck.mp4')"
+                                                                                    style="text-decoration: underline; cursor: pointer;">Video
+                                                                                    5 <span
+                                                                                        class="duration">05:39</span></a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="subchapter">
+                                                                            <div class="title"
+                                                                                onclick="display(document.getElementById('chapter-content-wrapper5'))"
+                                                                                style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                                                                                Chapter 5
+                                                                            </div>
+                                                                            <div class="chapter-content-wrapper"
+                                                                                id="chapter-content-wrapper5"
+                                                                                style="display: none;">
+
+
+
+                                                                                <div class="field field-video-media field-item"
+                                                                                    id="notred">
+                                                                                    <a class="chapter-content-link"
+                                                                                        onclick="playVideo('/media/bigbuck.mp4')"
+                                                                                        style="text-decoration: underline; cursor: pointer;">Video
+                                                                                        1 <span
+                                                                                            class="duration">05:39</span></a>
+                                                                                </div>
+
+                                                                                <div class="field field-video-media field-item"
+                                                                                    id="notred">
+                                                                                    <a class="chapter-content-link"
+                                                                                        onclick="playVideo('/media/bigbuck.mp4')"
+                                                                                        style="text-decoration: underline; cursor: pointer;">Video
+                                                                                        2 <span
+                                                                                            class="duration">05:39</span></a>
+                                                                                </div>
+
+                                                                                <div class="field field-video-media field-item"
+                                                                                    id="notred">
+                                                                                    <a class="chapter-content-link"
+                                                                                        onclick="playVideo('/media/bigbuck.mp4')"
+                                                                                        style="text-decoration: underline; cursor: pointer;">Video
+                                                                                        3 <span
+                                                                                            class="duration">05:39</span></a>
+                                                                                </div>
+
+                                                                                <div class="field field-video-media field-item"
+                                                                                    id="notred">
+                                                                                    <a class="chapter-content-link"
+                                                                                        onclick="playVideo('/media/bigbuck.mp4')"
+                                                                                        style="text-decoration: underline; cursor: pointer;">Video
+                                                                                        4 <span
+                                                                                            class="duration">05:39</span></a>
+                                                                                </div>
+
+                                                                                <div class="field field-video-media field-item"
+                                                                                    id="notred">
+                                                                                    <a class="chapter-content-link"
+                                                                                        onclick="playVideo('/media/video.mp4')"
+                                                                                        style="text-decoration: underline; cursor: pointer;">Video
+                                                                                        5 <span
+                                                                                            class="duration">05:39</span></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="video-player" id="videoPlayer">
+                                                                        <video id="myVideo" width="100%" controls
+                                                                            autoplay>
+                                                                            <source
+                                                                                src=""
+                                                                                type="video/mp4">
+                                                                        </video>
+                                                                        <img src="/images/trainingCourse/close.png" class="close-btn"
+                                                                            onclick="stopVideo()">
+                                                                    </div>
+
+                                                                    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+                                                                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                                                                    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+                                                                    <script>
+                                                                        var videoPlayer = document.getElementById("videoPlayer")
+                                                                        var myVideo = document.getElementById("myVideo")
+                                                                        function stopVideo() {
+                                                                            videoPlayer.style.display = "none";
+                                                                            myVideo.pause();
+                                                                            document.getElementById("body").style.backgroundColor = "#FFFFFF"
+                                                                        }
+                                                                        function playVideo(file) {
+                                                                            myVideo.src = file;
+                                                                            videoPlayer.style.display = "block";
+                                                                            document.getElementById("body").style.backgroundColor = "black"
+
+                                                                        }
+                                                                    </script>
+
+                                                                    <script>
+                                                                        function display(x) {
+
+                                                                            if (x.style.display == 'none') {
+                                                                                x.style.display = 'block'
+                                                                                x.style.transition = '0.3s'
+                                                                            } else {
+                                                                                x.style.display = 'none'
+                                                                                x.style.transition = '0.3s'
+                                                                            }
+                                                                        }
+                                                                    </script>
+                                                                    <script>
+                                                                        var x;
+                                                                        $(document).ready(function () {
+                                                                            $(" .field-video-media").hover(function () {
+                                                                                $(this).css("background-color", '#d7422b');
+                                                                                $(" .field-video-media").not(this).each(function () {
+                                                                                    $(this).css("background-color", '#FFFFFF');
+                                                                                });
+                                                                            }, function () {
+                                                                                $(".field-video-media").css("background-color", '#FFFFFF');
+                                                                            });
+                                                                        });
+
+                                                                    </script>
+
+                                                                    
+
+</body>

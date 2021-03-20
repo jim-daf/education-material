@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Material</title>
+    
+    <link rel="stylesheet" href="/assets/training_material/style.css">
+    <link rel="stylesheet" href="/assets/navbar.css">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    
+</head>
+<style>
+  
+ 
+</style>
+<!-- Navigation bar -->
+<nav id="navbar">
+    <div class="wrapper">
+        <div class="logo"><a href="#" id="logo">Training Material</a></div>
+        <input type="radio" name="slider" id="menu-btn">
+        <input type="radio" name="slider" id="close-btn">
+        <ul class="nav-links">
+            <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+            <li><a href="/dashboard" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><i class="fa fa-home"
+                        aria-hidden="true"></i> Home</a></li>
+            <li><a href="/users/trainingMaterial" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><i class="fa fa-info-circle"
+                        aria-hidden="true"></i> Training Material</a></li>
+            <li><a href="/users/trainingCourse" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><i
+                        class="fa fa-video-camera" aria-hidden="true"></i>
+                    Training Course</a></li>
+            <li>
+                <a href="#" class="desktop-item" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><i
+                        class="fa fa-users" aria-hidden="true"></i> Sectors <i class="fa fa-angle-down" id="arrow"
+                        aria-hidden="true"></i></a>
+                <input type="checkbox" id="showDrop">
+                <label for="showDrop" class="mobile-item"><i class="fa fa-users" aria-hidden="true"></i> Sectors <i
+                        class="fa fa-angle-down" id="arrow" aria-hidden="true"></i></label>
+                <ul class="drop-menu" style="font-family: Verdana, Geneva, Tahoma, sans-serif; ">
+                    <li><a href="#">Beer</a></li>
+                    <li><a href="#">Paper and pulp</a></li>
+                    <li><a href="#">Meat processing</a></li>
+                    <li><a href="#">Sugar</a></li>
+                    <li><a href="#">Vegetable oils</a></li>
+                    <li><a href="#">Wine</a></li>
+                    <li><a href="#">Juice</a></li>
+                    <li><a href="#">Biodiesel</a></li>
+                    <li><a href="#">Cheese</a></li>
+                    <li><a href="#">Potato processing</a></li>
+                    <li><a href="#">Ice-cream</a></li>
+                    <li><a href="#">Tomato processing</a></li>
+                    <li><a href="#">Yeast production</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="desktop-item" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Mega Menu <i
+                        class="fa fa-angle-down" id="arrow" aria-hidden="true"></i></a>
+                <input type="checkbox" id="showMega">
+                <label for="showMega" class="mobile-item">Mega Menu <i class="fa fa-angle-down" id="arrow"
+                        aria-hidden="true"></i></label>
+                <div class="mega-box">
+                    <div class="content">
+                        <div class="row">
+
+                            <header>Anaerobic bioreactor technologies</header>
+                            <ul class="mega-links">
+                                <li><a href="#">Safety equipment</a></li>
+                                <li><a href="#">Tanks and accessories</a></li>
+                                <li><a href="#">Mixing equipment</a></li>
+                                <li><a href="#">Pumping equipment</a></li>
+                                <li><a href="#">Heating equipment</a></li>
+                                <li><a href="#">Process monitoring equipment</a></li>
+                                <li><a href="#">Installation, operation and maintenance</a></li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <header>Dropdown</header>
+                            <ul class="mega-links">
+                                <li><a href="#">Dropmenu 1</a></li>
+                                <li><a href="#">Dropmenu 2</a></li>
+                                <li><a href="#">Dropmenu 3</a></li>
+                                <li><a href="#">Dropmenu 4</a></li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <header>Aerobic bioreactor technologies</header>
+                            <ul class="mega-links">
+                                <li><a href="#">Tanks and accessories (3D printing tanks)</a></li>
+                                <li><a href="#">Pumping equipment</a></li>
+                                <li><a href="#">Aeration equipment</a></li>
+                                <li><a href="#">Mixing equipment</a></li>
+                                <li><a href="#">Heating equipment</a></li>
+                                <li><a href="#">Process monitoring equipment</a></li>
+                                <li><a href="#">Installation, operation and maintenance</a></li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <header>Dropdown</header>
+                            <ul class="mega-links">
+                                <li><a href="#">Dropmenu 1</a></li>
+                                <li><a href="#">Dropmenu 2</a></li>
+                                <li><a href="#">Dropmenu 3</a></li>
+                                <li><a href="#">Dropmenu 4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a href="/users/contact" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><i class="fa fa-comment"
+                        aria-hidden="true"></i> Contact</a></li>
+            <li><a href="/users/logout" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><i class=icon-foo
+                        style="font-family: FontAwesome; font-style: normal;">&#xf08b;</i> Log out</a></li>
+        </ul>
+        <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+    </div>
+</nav>
+<body>
+   <br>
+    <div class="wrapper1" >
+        <!-- Top container section -->
+        <section class="top-container">
+            <header class="showcase">
+                <h1>Training Material</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ipsam! Nihil quo minima nulla atque!</p>
+                <a href="#" class="button">Read More</a>
+            </header>
+            
+        </section>
+        <!-- Table section -->
+        <section>
+            <table class="head_section">
+                
+                <thead>
+                    <tr class="col" style="color: white;">
+                        <th scope="col" >Company</th>
+                        <th scope="col">Products</th>
+                        <th scope="col">Website</th>
+                        <th scope="col">Region</th>
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr >
+                        <td >Papantonatos</td>
+                        <td >Centrifugal pump, sludge pumps</td>
+                        <td ><a href="https://papantonatos.gr/%CE%B1%CF%81%CF%87%CE%B9%CE%BA%CE%AE/">www.papantonatos.gr</a></td>
+                        <td >Worldwide</td>
+            
+                    </tr>
+                    <tr>
+                        <td >Papantonatos</td>
+                        <td >Centrifugal pump, sludge pumps</td>
+                        <td ><a href="https://papantonatos.gr/%CE%B1%CF%81%CF%87%CE%B9%CE%BA%CE%AE/">www.papantonatos.gr</a></td>
+                        <td >Worldwide</td>
+            
+                    </tr>
+            
+                    <tr>
+                        <td >Papantonatos</td>
+                        <td >Centrifugal pump, sludge pumps</td>
+                        <td ><a href="https://papantonatos.gr/%CE%B1%CF%81%CF%87%CE%B9%CE%BA%CE%AE/">www.papantonatos.gr</a></td>
+                        <td >Worldwide</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <!-- Image section -->
+        <section class="info">
+            <img src="/images/trainingMaterial/lamp.jpg" alt="">
+            <div>
+                <h2>Image/Video/Diagram Information</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae alias reiciendis deleniti possimus nemo
+                    non repellendus?
+                    Quae atque vero modi quidem! Autem cupiditate fugit doloribus ad amet, asperiores provident commodi.</p>
+                <a href="#" class="button">Learn More</a>
+            </div>
+        </section>
+    
+        
+        <!-- Boxes Section -->
+        <section class="boxes">
+            <div class="box">
+                <i class="fas fa-chart-pie fa-4x"></i>
+                <h3>Analytics</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, expedita?</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-globe fa-4x"></i>
+                <h3>Marketing</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, expedita?</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-cog fa-4x"></i>
+                <h3>Development</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, expedita?</p>
+            </div>
+            <div class="box">
+                <i class="fa fa-users fa-4x"></i>
+                <h3>Support</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, expedita?</p>
+            </div>
+        </section>
+    
+        
+        <!-- Video Section -->
+        <section class="info">
+            <video controls src="/media/video.mp4" type="video/mp4" width="750 px"></video>
+            <div>
+                <h2>Image/Video/Diagram Information</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae alias reiciendis deleniti possimus nemo
+                    non repellendus?
+                    Quae atque vero modi quidem! Autem cupiditate fugit doloribus ad amet, asperiores provident commodi.</p>
+                <a href="#" class="button">Learn More</a>
+            </div>
+        </section>
+    
+        <!-- Portfolio section -->
+        <section class="portfolio">
+            <img src="/images/trainingMaterial/image1.jpg" alt="">
+            <img src="/images/trainingMaterial/image2.jpg" alt="">
+            <img src="/images/trainingMaterial/image3.jpg" alt="">
+            <img src="/images/trainingMaterial/image4.jpg" alt="" >
+            
+            
+            
+        </section>
+        
+        <!-- Footer -->
+        <footer style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            <p>More material will be uploaded soon</p>
+        </footer>
+    
+    </div>
+    
+        
+    
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+                document.getElementById("navbar").style.transition = "0.3s";
+            } else {
+
+                document.getElementById("navbar").style.top = "-100px";
+                document.getElementById("navbar").style.transition = "0.3s";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+
+    </script>
+    
+    <script>
+            $(function () {
+                $("table").click(function () {
+
+                    $("html").toggleClass($(this).attr("class"));
+
+                });
+            });
+    </script>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>

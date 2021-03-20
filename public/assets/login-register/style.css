@@ -1,0 +1,22 @@
+body{
+    background:url('/images/login-register/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+}
+#button{
+    background-color: #3e708a;
+}
+#button:hover{
+    background-color:#3e8aaf
+}
+.card{
+    max-width:750px;
+    position:relative;
+    transform: translateX(10%);
+}
+
+@media screen and (max-width: 1700px) {
+    .card{
+        transform: translateX(0%);
+    }
+}

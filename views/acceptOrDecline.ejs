@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accept or Decline</title>
+    <link rel="stylesheet" href="/assets/acceptOrDecline/style.css">
+</head>
+<body style="background: url('/images/acceptOrDecline/background.jpg') no-repeat center center fixed; background-size: cover;">
+    <%- include('partials/messages'); %>
+    
+    
+    <% for(var i=data.length-1;i>-1;--i){ %>
+        <% if(data[i].checked==true || data[i].role=="admin"){ %>
+            <% data.splice(i,1) %>
+        <% } %>
+    <% } %>
+
+    <% for(var i=data.length-1;i>-1;i--){ %>
+        <br>
+        <form  method="post">
+            
+                <!--<input type="text" name="cd" id='cd' value="<%= data[i] %>" />-->
+                <input type="hidden" name="link" id='link' value="<%= data[i].email %>" />
+                
+                
+                
+                    
+                <p id="user_data">Ονοματεπώνυμο=<%= data[i].Ονοματεπώνυμο %>
+                </p>
+                <p id="user_data">email=<%= data[i].email %>
+                </p>
+                <p id="user_data">Τμήμα Αποφοίτησης=<%= data[i].Τμήμα_Αποφοίτησης %>
+                </p>
+                <p id="user_data">Τίτλος Διπλωματικής Εργασίας=<%= data[i].Τίτλος_Διπλωματικής_Εργασίας %>
+                </p>
+                <p id="user_data">Μεταπτυχιακός Τίτλος=<%= data[i].Μεταπτυχιακός_Τίτλος_1 %>
+                </p>
+                <p id="user_data">Μεταπτυχιακός Τίτλος=<%= data[i].Μεταπτυχιακός_Τίτλος_2 %>
+                </p>
+                <p id="user_data">Μεταπτυχιακός Τίτλος=<%= data[i].Μεταπτυχιακός_Τίτλος_3 %>
+                </p>
+                <p id="user_data">Εργασιακή Εμπειρία=<%= data[i].Εργασιακή_Εμπειρία_1 %>
+                </p>
+                <p id="user_data">Εργασιακή Εμπειρία=<%= data[i].Εργασιακή_Εμπειρία_2 %>
+                </p>
+                <p id="user_data">Εργασιακή Εμπειρία=<%= data[i].Εργασιακή_Εμπειρία_3 %>
+                </p>
+                <p id="user_data">Περιοχή Δραστηριοποίησης=<%= data[i].Περιοχή_Δραστηριοποίησης %>
+                </p>
+                <p id="user_data">Τηλέφωνο=<%= data[i].Τηλέφωνο %>
+                </p>
+                <p id="user_data">Αρχείο=<%= data[i].link %>
+                </p>
+                <p id="user_data">Ημερομηνία Εγγραφής=<%= data[i].Ημερομηνία_Εγγραφής %>
+                </p>
+                <br>
+                <button type="submit" formaction='/users/accept' id="user_data" style="color: white; background-color: green;">Accept</button>
+                <button type="submit" formaction='/users/decline' id="user_data" style="background-color: rgb(231, 15, 15); color: rgb(255, 255, 255); float: right;" >Decline</button>
+                
+                
+                
+            
+            
+        
+        </form>
+        <br>
+    <% } %>
+
+    
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/login-register/style.css">
+</head>
+
+<body>
+    <div class="row mt-5">
+        <div class="col-md-6 m-auto">
+            <div class="card card-body">
+                <h1 class="text-center mb-3">
+                    <i class="fas fa-user-plus"></i> Register
+                </h1>
+                <%- include('partials/messages'); %>
+
+                    <form action="/users/register" method="POST" >
+                        <div class="form-group">
+                            <label for="name">Ονοματεπώνυμο*</label>
+                            <input type="name" id="name" name="name" class="form-control" placeholder="Enter Name"
+                                value="<%= typeof name != 'undefined' ? name : '' %>" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email"
+                                value="<%= typeof email != 'undefined' ? email : '' %>" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Κωδικός*</label>
+                            <input type="password" id="password" name="password" class="form-control"
+                                placeholder="Create Password"
+                                value="<%= typeof password != 'undefined' ? password : '' %>" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password2">Επιβεβαίωση κωδικού*</label>
+                            <input type="password" id="password2" name="password2" class="form-control"
+                                placeholder="Confirm Password"
+                                value="<%= typeof password2 != 'undefined' ? password2 : '' %>" />
+                        </div>
+                        <div class="form-group">
+                            <label for="Σχολη αποφοίτησης">Σχολή Αποφοίτησης</label>
+                            <input type="text"  name="graddep" id='graddep' class="form-control" placeholder="πχ Τμήμα Μηχανικών Περιβάλλοντος" value="<%= typeof text != 'undefined' ? graddep : '' %>"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="Τίτλος Διπλωματικής Εργασίας">Τίτλος Διπλωματικής Εργασίας (Προαιρετικό)</label>
+                            <input type="text" name="diplomaProject" class="form-control" id="diplomaProject" placeholder="Εισάγεται τον τίτλο της διπλωματικής εργασίας σας" value="<%= typeof text != 'undefined' ? diplomaProject : '' %>" />
+                        </div>
+                        <div class="form-group">
+                            <label for="Μεταπτυχιακές Σπούδες">Μεταπτυχιακές Σπούδες (Προαιρετικό)</label>
+                            <input type="text" name="msc1" class="form-control" id="msc1" placeholder="Εισάγετε Μεταπτυχιακό Τίτλο" value="<%= typeof text != 'undefined' ? msc1 : '' %>"/>
+                            <input type="text" name="msc2" class="form-control" id="msc2" placeholder="Εισάγετε Μεταπτυχιακό Τίτλο" value="<%= typeof text != 'undefined' ? msc2 : '' %>"/>
+                            <input type="text" name="msc3" class="form-control" id="msc3" placeholder="Εισάγετε Μεταπτυχιακό Τίτλο" value="<%= typeof text != 'undefined' ? msc3 : '' %>"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="Εργασιακή Εμπειρία">Εργασιακή Εμπειρία (Προαιρετικό)</label>
+                            <input type="text" name="exp1" class="form-control" id="exp1" placeholder="Εμπειρία 1" value="<%= typeof text != 'undefined' ? exp1 : '' %>"/>
+                            <input type="text" name="exp2" class="form-control" id="exp2" placeholder="Εμπειρία 2" value="<%= typeof text != 'undefined' ? exp2 : '' %>"/>
+                            <input type="text" name="exp3" class="form-control" id="exp3" placeholder="Εμπειρία 3" value="<%= typeof text != 'undefined' ? exp3 : '' %>"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="Περιοχή Δραστηριοποίησης">Περιοχή Δραστηριοποίησης (Προαιρετικό)</label>
+                            <input type="text" name="activityArea" class="form-control" id="activityArea" placeholder="Εισάγετε περιοχή" value="<%= typeof text != 'undefined' ? activityArea : '' %>" />
+                        </div>
+                        <div class="form-group">
+                            <label for="Τηλέφωνο Επικοινωνίας">Τηλέφωνο Επικοινωνίας (Προαιρετικό)</label>
+                            <input type="number" name="phoneNumber" class="form-control" id="phoneNumber" placeholder="Εισάγεται Τηλέφωνο" value="<%= typeof text != 'undefined' ? phoneNumber : '' %>"  />
+                        </div>
+                        
+                        
+                        
+                        <button type="submit" id="button"  class="btn btn-primary btn-block"  >
+                            Next
+                        </button>
+                    </form>
+                    <p class="lead mt-4">Already have an account? <a href="/users/login">Login</a></p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    
+</body>
+</html>
+
+
+
+

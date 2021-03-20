@@ -1,0 +1,46 @@
+{
+  "name": "registration-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.2",
+    "bcryptjs": "^2.4.3",
+    "chalk": "^4.1.0",
+    "connect-flash": "^0.1.1",
+    "consolidate": "^0.16.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-fileupload": "^1.2.1",
+    "express-session": "^1.17.1",
+    "gridfs-stream": "^1.1.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.11.8",
+    "multer": "^1.4.2",
+    "multer-gridfs-storage": "^4.2.0",
+    "mustache": "^4.1.0",
+    "nodemailer": "^6.4.17",
+    "nodemailer-mailgun-transport": "^2.0.2",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sendgrid": "^5.2.3",
+    "streamifier": "^0.1.1"
+  },
+  "devDependencies": {
+    "alert": "^5.0.10",
+    "dialog": "^0.3.1",
+    "node-popup": "^0.1.14",
+    "nodemon": "^2.0.6"
+  }
+    
+ 
+}

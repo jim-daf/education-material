@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/login-register/style.css">
+</head>
+
+<body>
+    <div class="row mt-5">
+        <div class="col-md-6 m-auto">
+            <div class="card card-body">
+                <h1 class="text-center mb-3">
+                    <i class="fas fa-user-plus"></i> Upload File
+                </h1>
+                <%- include('partials/messages'); %>
+                <br>
+                    <form enctype="multipart/form-data" action="/users/uploadFile" method="POST">
+                        
+                        <div class="form-group">
+                            <label for="myFike">(Προαιρετικό)</label><br>
+                            <input type="file"  name="myFile" id="myFile"
+                                formenctype="multipart/form-data">
+                        </div>
+                        <br>
+                        <button type="submit" id="button" class="btn btn-primary btn-block">
+                            Register
+                        </button>
+                    </form>
+                    <p class="lead mt-4">Already have an account? <a href="/users/login">Login</a></p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+
+</body>
+
+</html>

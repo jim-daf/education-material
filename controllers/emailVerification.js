@@ -1,5 +1,5 @@
 const sgMail = require('@sendgrid/mail')
-sgMail.setApiKey('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')
+sgMail.setApiKey('Insert your sendgrid Api Key')
 const express = require('express')
 const uploadFile=require("../controllers/uploadFilesToMongo");
 

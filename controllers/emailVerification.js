@@ -11,7 +11,7 @@ verification: function(req, res,email){
     host=req.get('host');
     link="http://"+req.get('host')+"/verify?id="+rand;
     const msg={
-        from: 'jimitrakis11@gmail.com',
+        from: "sender's email",
         to : email,
         subject : "Confirm your Email account",
         html : "Hello,<br> Please click on the link to verify your email.<br><a href="+link+">Click here to verify</a>"

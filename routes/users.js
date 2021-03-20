@@ -12,7 +12,7 @@ const{registration}=require('../controllers/registration');
 const uploadFile=require('../controllers/uploadFilesToMongo')
 // sendgrid
 const sgMail = require('@sendgrid/mail')
-sgMail.setApiKey('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')
+sgMail.setApiKey('insert your sendgrid api key')
 
 // Mongo URI
 const db=require('../config/keys').MongoURI;
@@ -168,7 +168,7 @@ router.post('/notifyStudents',(req,res)=>{
     })
     res.redirect('back');
 })
-
+// user's email verified
 /*router.post('/verify',(req,res)=>{
     const{ name,email,password,password2,graddep,diplomaProject,msc1,msc2,msc3,exp1,exp2,exp3,activityArea,phoneNumber,CV}=req.body;
     User.updateOne({role:"basic",email:email},  
